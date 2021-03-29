@@ -1,0 +1,29 @@
+{
+  "name": "shop-petitsfruits",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphpaquet/shop-petitsfruits.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphpaquet/shop-petitsfruits/issues"
+  },
+  "homepage": "https://github.com/raphpaquet/shop-petitsfruits#readme",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
+    "nodemon": "^2.0.7"
+  }
+}
