@@ -163,6 +163,9 @@ img.larger {
   font-size: 2rem;
 }
 /* Alert */
+.loading {
+  display: block !important;
+}
 .success {
   color: rgb(39, 114, 39);
 }
@@ -215,4 +218,16 @@ img.larger {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+/* Checkout-steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex:1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: purple;
+  color: purple
 }
