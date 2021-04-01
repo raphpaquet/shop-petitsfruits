@@ -4,6 +4,9 @@ import { signout } from "./actions/userActions";
 import { userSigninReducer } from "./reducers/userReducers";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import OrderDetailsScreen from "./screens/OrderDetailsScreen";
+import PaymentMethodScreen from "./screens/PaymentMethodScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProductScreen from "./screens/ProductScreen";
 import RegisterScreen from "./screens/registerScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
@@ -56,6 +59,9 @@ function App() {
           <Route path="/signin" component={SigninScreen} />
           <Route path="/register" component={RegisterScreen} />
           <Route path="/shipping" component={ShippingAddressScreen} />
+          <Route path="/payment" component={PaymentMethodScreen} />
+          <Route path="/placeOrder" component={PlaceOrderScreen} />
+          <Route path="/order/:id" component={OrderDetailsScreen} />
           <Route path="/" component={HomeScreen} exact />
         </main>
         <footer className="row center">All right reserved</footer>
