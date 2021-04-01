@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
+import PrivateRoute from "./components/PrivateRoute";
 import { userSigninReducer } from "./reducers/userReducers";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
@@ -48,7 +49,7 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                 <li>
-                    <Link to="/profile">User</Link>
+                    <Link to="/profile">User Profile</Link>
                   </li>
                   <li>
                     <Link to="/orderhistory">Order History</Link>
@@ -73,7 +74,7 @@ function App() {
           <Route path="/placeOrder" component={PlaceOrderScreen} />
           <Route path="/order/:id" component={OrderDetailsScreen} />
           <Route path="/orderhistory" component={OrderHistoryScreen} />
-          <Route path="/profile" component={ProfileScreen} />
+          <PrivateRoute path="/profile" component={ProfileScreen} />
           <Route path="/" component={HomeScreen} exact />
         </main>
         <footer className="row center">All right reserved</footer>
