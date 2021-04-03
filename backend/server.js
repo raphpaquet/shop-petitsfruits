@@ -4,6 +4,8 @@ const userRouter = require("./routers/userRouter.js");
 const productRouter = require("./routers/productRouter.js");
 const dotenv = require("dotenv");
 const orderRouter = require("./routers/orderRouter.js");
+const uploadRouter = require("./routers/uploadRouter.js");
+const path = require('path');
 
 dotenv.config();
 
@@ -22,13 +24,17 @@ mongoose.connect(
   }
 );
 
+app.use("/api/uploads", uploadRouter);
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
-app.use('/api/orders', orderRouter);
+app.use("/api/orders", orderRouter);
 
-app.get('/api/config/paypal', (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID || 'sb')
-})
+app.get("/api/config/paypal", (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
+
+const _dirname = path.resolve();
+app.use('/uploads', express.static(path.join(_dirname, '/uploads')));
 
 app.get("/", (req, res) => {
   res.send("Server is ready");
