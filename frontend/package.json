@@ -1,8 +1,8 @@
 {
   "name": "shop-petitsfruits",
+  "type":"module",
   "proxy": "http://127.0.0.1:5000",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",

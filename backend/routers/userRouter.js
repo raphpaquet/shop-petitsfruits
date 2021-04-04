@@ -1,9 +1,9 @@
-const express = require("express");
-const User = require("../models/userModel.js");
-const data = require("../data.js");
-const bcrypt = require("bcryptjs");
-const expressAsyncHandler = require("express-async-handler");
-const { generateToken, isAuth } = require("../utils.js");
+import express from "express";
+import User from "../models/userModel.js";
+import data from "../data.js";
+import bcrypt from "bcryptjs";
+import expressAsyncHandler from "express-async-handler";
+import { generateToken, isAuth } from "../utils.js";
 
 const userRouter = express.Router();
 

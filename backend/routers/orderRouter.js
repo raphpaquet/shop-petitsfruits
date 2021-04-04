@@ -1,8 +1,8 @@
-const express = require("express");
-const data = require("../data.js");
-const expressAsyncHandler = require("express-async-handler");
-const Order = require("../models/orderModel.js");
-const { isAuth, isAdmin } = require("../utils.js");
+import express from "express";
+import data from "../data.js";
+import expressAsyncHandler from "express-async-handler";
+import Order from "../models/orderModel.js";
+import { isAuth, isAdmin } from "../utils.js";
 
 const orderRouter = express.Router();
 
