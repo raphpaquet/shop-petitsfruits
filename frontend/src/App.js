@@ -14,7 +14,7 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductScreen from "./screens/ProductScreen";
 import ProfileScreen from "./screens/ProfileScreen";
-import RegisterScreen from "./screens/RegisterScreen";
+import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 
