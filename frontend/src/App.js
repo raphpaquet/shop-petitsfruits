@@ -3,7 +3,6 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import { signout } from "./actions/userActions";
 import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
-import { userSigninReducer } from "./reducers/userReducers";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import OrderDetailsScreen from "./screens/OrderDetailsScreen";
@@ -15,9 +14,8 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductScreen from "./screens/ProductScreen";
 import ProfileScreen from "./screens/ProfileScreen";
-import RegisterScreen from "./screens/registerScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
-import ShippingAddress from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 
 function App() {
