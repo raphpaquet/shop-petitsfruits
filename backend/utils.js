@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-const generateToken = (user) => {
+export const generateToken = (user) => {
   return jwt.sign(
     {
       _id: user._id,
@@ -15,7 +15,7 @@ const generateToken = (user) => {
   );
 };
 
-const isAuth = (req, res, next) => {
+export const isAuth = (req, res, next) => {
   const authorization = req.headers.authorization;
   if (authorization) {
     const token = authorization.slice(7, authorization.length); // Bearer XXXXX (token) we're just getting the token not the bearer
@@ -36,7 +36,7 @@ const isAuth = (req, res, next) => {
   }
 };
 
-const isAdmin = (req, res, next) => {
+export const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
   } else {
@@ -44,4 +44,4 @@ const isAdmin = (req, res, next) => {
   }
 };
 
-module.exports = { generateToken, isAuth, isAdmin };
+
