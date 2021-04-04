@@ -5,7 +5,7 @@ const productRouter = require("./routers/productRouter.js");
 const dotenv = require("dotenv");
 const orderRouter = require("./routers/orderRouter.js");
 const uploadRouter = require("./routers/uploadRouter.js");
-const path = require('path');
+const path = require("path");
 
 dotenv.config();
 
@@ -34,11 +34,14 @@ app.get("/api/config/paypal", (req, res) => {
 });
 
 const _dirname = path.resolve();
-app.use('/uploads', express.static(path.join(_dirname, '/uploads')));
-
-app.get("/", (req, res) => {
-  res.send("Server is ready");
-});
+app.use("/uploads", express.static(path.join(_dirname, "/uploads")));
+app.use(express.static(path.join(_dirname, "/frontend/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(_dirname, "/frontend/build/index.html"))
+);
+// app.get("/", (req, res) => {
+//   res.send("Server is ready");
+// });
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
