@@ -8,6 +8,7 @@ import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import OrderDetailsScreen from "./screens/OrderDetailsScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
+import OrderListScreen from "./screens/OrderListScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
@@ -77,13 +78,13 @@ function App() {
                     <Link to="/dashboard">Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/productList">Products</Link>
+                    <Link to="/productlist">Products</Link>
                   </li>
                   <li>
-                    <Link to="/orderList">Orders</Link>
+                    <Link to="/orderlist">Orders</Link>
                   </li>
                   <li>
-                    <Link to="/userList">Users</Link>
+                    <Link to="/userlist">Users</Link>
                   </li>
                 </ul>
               </div>
@@ -103,6 +104,7 @@ function App() {
           <Route path="/orderhistory" component={OrderHistoryScreen} />
           <PrivateRoute path="/profile" component={ProfileScreen} />
           <AdminRoute path="/productlist" component={ProductListScreen}/>
+          <AdminRoute path="/orderlist" component={OrderListScreen}/>
           <Route path="/" component={HomeScreen} exact />
         </main>
         <footer className="row center">All right reserved</footer>
