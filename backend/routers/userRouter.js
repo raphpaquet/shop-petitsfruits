@@ -90,4 +90,4 @@ userRouter.put(
   })
 );
 
-module.exports = userRouter;
+export default userRouter;

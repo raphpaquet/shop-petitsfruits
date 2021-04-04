@@ -90,4 +90,4 @@ productRouter.delete(
   })
 );
 
-module.exports = productRouter;
+export default productRouter;
