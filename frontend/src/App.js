@@ -7,7 +7,7 @@ import AdminRoute from "./components/AdminRoute";
 import LoadingBox from "./components/LoadingBox";
 import MessageBox from "./components/MessageBox";
 import PrivateRoute from "./components/PrivateRoute";
-import SearchBox from "./components/SearchBox";
+// import SearchBox from "./components/SearchBox";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import OrderDetailsScreen from "./screens/OrderDetailsScreen";
@@ -27,7 +27,7 @@ import UserEditScreen from "./screens/UserEditScreen";
 import UserListScreen from "./screens/UserListScreen";
 
 function App() {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
@@ -48,14 +48,16 @@ function App() {
     dispatch(listProductCategories());
   }, [dispatch]);
 
-
-
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
           <div>
-            <button type="button" className="open-sidebar" onClick={() =>setSidebarIsOpen(true)}>
+            <button
+              type="button"
+              className="open-sidebar"
+              onClick={() => setSidebarIsOpen(true)}
+            >
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
@@ -63,10 +65,19 @@ function App() {
             </Link>
           </div>
           <div>
-            <Route
-              render={({history}) => <SearchBox history={history}></SearchBox>}
-            ></Route>
+            <img
+              src="./images/logo.png"
+              alt="logo petitsfruits, grappe de raisin orange"
+              className="small"
+            />
           </div>
+          {/* <div>
+            <Route
+              render={({ history }) => (
+                <SearchBox history={history}></SearchBox>
+              )}
+            ></Route>
+          </div> */}
           <div>
             <Link to="/cart">
               Cart
@@ -119,7 +130,7 @@ function App() {
             )}
           </div>
         </header>
-        <aside className={sidebarIsOpen ? 'open' : ''}>
+        <aside className={sidebarIsOpen ? "open" : ""}>
           <ul className="categories">
             <li>
               <strong>Categories</strong>
@@ -161,9 +172,21 @@ function App() {
           <Route path="/order/:id" component={OrderDetailsScreen} />
           <Route path="/orderhistory" component={OrderHistoryScreen} />
           <Route path="/search/name/:name?" component={SearchScreen} exact />
-          <Route path="/search/category/:category" component={SearchScreen} exact />
-          <Route path="/search/pageNumber/:pageNumber" component={ProductListScreen} exact />
-          <Route path="/search/category/:category/name/:name/min/:min/max/:max/order/:order/pageNumber/:pageNumber" component={SearchScreen} exact />
+          <Route
+            path="/search/category/:category"
+            component={SearchScreen}
+            exact
+          />
+          <Route
+            path="/search/pageNumber/:pageNumber"
+            component={ProductListScreen}
+            exact
+          />
+          <Route
+            path="/search/category/:category/name/:name/min/:min/max/:max/order/:order/pageNumber/:pageNumber"
+            component={SearchScreen}
+            exact
+          />
           <PrivateRoute path="/profile" component={ProfileScreen} />
           <AdminRoute path="/productlist" component={ProductListScreen} />
           <AdminRoute path="/orderlist" component={OrderListScreen} />
@@ -171,7 +194,25 @@ function App() {
           <AdminRoute path="/user/:id/edit" component={UserEditScreen} />
           <Route path="/" component={HomeScreen} exact />
         </main>
-        <footer className="row center">All right reserved</footer>
+        <footer className="row center">
+          <div className="social">
+            <a
+              href="https://www.facebook.com/petitsfruitsillustration/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/petitsfruits_/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa fa-instagram"></i>
+            </a>
+          </div>
+          <div>All right reserved</div>
+        </footer>
       </div>
     </BrowserRouter>
   );

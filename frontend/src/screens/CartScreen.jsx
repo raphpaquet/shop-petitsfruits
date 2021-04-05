@@ -69,10 +69,10 @@ export default function CartScreen(props) {
                   <div>{item.price}$</div>
                   <div>
                     <button
-                      className="button"
+                      className="button clear"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      Delete
+                      <i className="fa fa-close"></i>
                     </button>
                   </div>
                 </div>
