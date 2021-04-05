@@ -15,16 +15,17 @@ export default function HomeScreen() {
   useEffect(() => {
     dispatch(listProducts({}));
   }, [dispatch]);
+
   return (
     <div>
-      <h2>Featured Products</h2>
+      <h2>Nouveautés</h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-          {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
+          {products.length === 0 && <MessageBox>Aucun produit trouvé</MessageBox>}
           <div className="row center">
             {products.map((product) => (
               <Product key={product._id} product={product}></Product>

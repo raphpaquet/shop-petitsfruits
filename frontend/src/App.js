@@ -80,7 +80,7 @@ function App() {
           </div> */}
           <div>
             <Link to="/cart">
-              Cart
+              Panier
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
@@ -92,20 +92,20 @@ function App() {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/profile">User Profile</Link>
+                    <Link to="/profile">Profile</Link>
                   </li>
                   <li>
-                    <Link to="/orderhistory">Order History</Link>
+                    <Link to="/orderhistory">Commandes</Link>
                   </li>
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
-                      Sign Out
+                      Déconnexion
                     </Link>
                   </li>
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <Link to="/signin">Connexion</Link>
             )}
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
@@ -117,13 +117,13 @@ function App() {
                     <Link to="/dashboard">Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/productlist">Products</Link>
+                    <Link to="/productlist">Produits</Link>
                   </li>
                   <li>
-                    <Link to="/orderlist">Orders</Link>
+                    <Link to="/orderlist">Commandes</Link>
                   </li>
                   <li>
-                    <Link to="/userlist">Users</Link>
+                    <Link to="/userlist">Usagers</Link>
                   </li>
                 </ul>
               </div>
@@ -133,7 +133,7 @@ function App() {
         <aside className={sidebarIsOpen ? "open" : ""}>
           <ul className="categories">
             <li>
-              <strong>Categories</strong>
+              <strong>Catégories</strong>
               <button
                 onClick={() => setSidebarIsOpen(false)}
                 className="close-sidebar"
@@ -211,7 +211,7 @@ function App() {
               <i className="fa fa-instagram"></i>
             </a>
           </div>
-          <div>All right reserved</div>
+          <div>RP & Petitsfruits | All right reserved</div>
         </footer>
       </div>
     </BrowserRouter>

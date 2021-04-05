@@ -56,25 +56,25 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div>{products.length} Results</div>
+          <div>{products.length} Résultats</div>
         )}
         <div>
-          Sort by{" "}
+          Classer par{" "}
           <select
             value={order}
             onChange={(e) => {
               props.history.push(getFilterUrl({ order: e.target.value }));
             }}
           >
-            <option value="newest">Newest Arrivals</option>
-            <option value="lowest">Price: Low to High</option>
-            <option value="highest">Price: High to Low</option>
+            <option value="newest">Nouveautés</option>
+            <option value="lowest">Prix: Croissant</option>
+            <option value="highest">Prix: Décroissant</option>
           </select>
         </div>
       </div>
       <div className="row top">
         <div className="col-1">
-          <h3>Department</h3>
+          <h3>Catégories</h3>
           <div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
@@ -87,7 +87,7 @@ export default function SearchScreen(props) {
                     className={"all" === category ? "active" : ""}
                     to={getFilterUrl({ category: "all" })}
                   >
-                    Any
+                    Tout
                   </Link>
                 </li>
                 {categories.map((c) => (
@@ -104,7 +104,7 @@ export default function SearchScreen(props) {
             )}
           </div>
           <div>
-            <h3>Price</h3>
+            <h3>Prix</h3>
             <ul>
               {prices.map((p) => (
                 <li key={p.name}>

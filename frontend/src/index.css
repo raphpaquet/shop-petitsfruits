@@ -64,7 +64,12 @@ h2.orange {
   color: #fdcc9a;
   letter-spacing: 0.2em;
 }
-
+h3 {
+  color: #969696;
+  font-weight: lighter;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -93,7 +98,8 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-select, 
+select,
+textarea, 
 input {
   color: #969696;
 }
@@ -106,6 +112,8 @@ select:hover,
 textarea:hover,
 button:hover {
   border: 0.1rem #c4c3c3 solid;
+}
+button:hover {
   font-style: italic;
 }
 button.primary {
@@ -117,6 +125,7 @@ button.block {
 }
 button.small {
   font-size: 1.2rem;
+  color: #969696;
 }
 button.clear {
   background-color: transparent;
@@ -362,6 +371,7 @@ img.large {
   margin-left: 0.5rem;
 }
 .active {
+  color: #fdcc9a;
   font-weight: bold;
 }
 

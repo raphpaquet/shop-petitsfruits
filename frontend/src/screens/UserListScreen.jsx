@@ -60,7 +60,7 @@ export default function UserListScreen(props) {
                 <td>{user.isAdmin ? "YES" : "NO"}</td>
                 <td>
                   <button
-                    clas="small"
+                    className="small"
                     type="button"
                     onClick={() => props.history.push(`/user/${user._id}/edit`)}
                   >

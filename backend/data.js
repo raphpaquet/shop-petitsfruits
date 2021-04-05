@@ -9,8 +9,8 @@ const data = {
       isAdmin: true,
       isSeller: true,
       seller: {
-        name: 'Puma',
-        logo: '/images/logo1.png',
+        name: 'Petitsfruits',
+        logo: '/images/logo.png',
         description: 'best seller',
       },
     },
