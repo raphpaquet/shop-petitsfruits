@@ -25,7 +25,7 @@ export default function ProfileScreen(props) {
 
   useEffect(() => {
     if (!user) {
-      dispatch({type: USER_UPDATE_PROFILE_RESET})
+      dispatch({ type: USER_UPDATE_PROFILE_RESET });
       dispatch(detailsUser(userInfo._id));
     } else {
       setName(user.name);
@@ -53,7 +53,7 @@ export default function ProfileScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-           {loadingUpdate && <LoadingBox></LoadingBox>}
+            {loadingUpdate && <LoadingBox></LoadingBox>}
             {errorUpdate && (
               <MessageBox variant="danger">{errorUpdate}</MessageBox>
             )}
