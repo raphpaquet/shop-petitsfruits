@@ -61,7 +61,7 @@ function App() {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              petitsfruits
+              petitsfruits boutique
             </Link>
           </div>
           <div>
@@ -133,14 +133,17 @@ function App() {
         <aside className={sidebarIsOpen ? "open" : ""}>
           <ul className="categories">
             <li>
-              <strong>Catégories</strong>
+              <img src="/images/logo_blanc.png" alt="logo petitsfruits blanc" className="small center"/>
               <button
                 onClick={() => setSidebarIsOpen(false)}
                 className="close-sidebar"
                 type="button"
-              >
+                >
                 <i className="fa fa-close"></i>
               </button>
+            </li>
+            <li style={{cursor:"default"}}>
+                <strong>Catégories</strong>
             </li>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
@@ -211,7 +214,7 @@ function App() {
               <i className="fa fa-instagram"></i>
             </a>
           </div>
-          <div>RP & Petitsfruits | All right reserved</div>
+          <div>RP & Petitsfruits | Tous Droits Réservés</div>
         </footer>
       </div>
     </BrowserRouter>

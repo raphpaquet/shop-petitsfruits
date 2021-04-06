@@ -56,9 +56,9 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
-          <div>{products.length} Résultats</div>
+          <div className="padding">{products.length} {products.length > 1 ? 'Résultats' : 'Résultat'}</div>
         )}
-        <div>
+        {/* <div>
           Classer par{" "}
           <select
             value={order}
@@ -70,12 +70,63 @@ export default function SearchScreen(props) {
             <option value="lowest">Prix: Croissant</option>
             <option value="highest">Prix: Décroissant</option>
           </select>
-        </div>
+        </div> */}
       </div>
       <div className="row top">
         <div className="col-1">
-          <h3>Catégories</h3>
-          <div>
+          <div className="dropdown search-page">
+            <Link to="#">
+                Categories <i className="fa fa-caret-down"></i>
+            </Link>
+              {loadingCategories ? (
+                <LoadingBox></LoadingBox>
+              ) : errorCategories ? (
+                <MessageBox variant="danger">{errorCategories}</MessageBox>
+              ) : (
+                <ul className="dropdown-content">
+                  <li>
+                    <Link
+                      className={"all" === category ? "active" : ""}
+                      to={getFilterUrl({ category: "all" })}
+                    >
+                      Tout
+                    </Link>
+                  </li>
+                  {categories.map((c) => (
+                    <li key={c}>
+                      <Link
+                        className={c === category ? "active" : ""}
+                        to={getFilterUrl({ category: c })}
+                      >
+                        {c}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+          </div>
+          <div className="dropdown search-page">
+            <Link to="#">
+                Prix<i className="fa fa-caret-down"></i>
+            </Link>
+            <ul className="dropdown-content">
+              {prices.map((p) => (
+                <li key={p.name}>
+                  <Link
+                    to={getFilterUrl({ min: p.min, max: p.max })}
+                    className={
+                      `${p.min}-${p.max}` === `${min}-${max}` ? "active" : ""
+                    }
+                  >
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* <h3>Catégories</h3> */}
+          {/* <div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
             ) : errorCategories ? (
@@ -102,8 +153,8 @@ export default function SearchScreen(props) {
                 ))}
               </ul>
             )}
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <h3>Prix</h3>
             <ul>
               {prices.map((p) => (
@@ -119,7 +170,7 @@ export default function SearchScreen(props) {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="col-3">
           {loading ? (
