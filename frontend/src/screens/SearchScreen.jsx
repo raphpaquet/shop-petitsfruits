@@ -107,7 +107,7 @@ export default function SearchScreen(props) {
           </div>
           <div className="dropdown search-page">
             <Link to="#">
-                Prix<i className="fa fa-caret-down"></i>
+                Trier par Prix{' '}<i className="fa fa-caret-down"></i>
             </Link>
             <ul className="dropdown-content">
               {prices.map((p) => (
@@ -182,6 +182,7 @@ export default function SearchScreen(props) {
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
               )}
+                <h3 className="category">{category}</h3>
               <div className="row center">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>

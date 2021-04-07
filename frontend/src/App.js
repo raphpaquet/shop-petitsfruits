@@ -9,7 +9,7 @@ import MessageBox from "./components/MessageBox";
 import PrivateRoute from "./components/PrivateRoute";
 // import SearchBox from "./components/SearchBox";
 import CartScreen from "./screens/CartScreen";
-import HomeScreen from "./screens/HomeScreen";
+import ShopScreen from "./screens/ShopScreen";
 import OrderDetailsScreen from "./screens/OrderDetailsScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderListScreen from "./screens/OrderListScreen";
@@ -25,8 +25,9 @@ import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import SigninScreen from "./screens/SigninScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import UserListScreen from "./screens/UserListScreen";
+import HomeScreen from "./screens/HomeScreen";
 
-function App() {
+function App(props) {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -195,6 +196,7 @@ function App() {
           <AdminRoute path="/orderlist" component={OrderListScreen} />
           <AdminRoute path="/userlist" component={UserListScreen} />
           <AdminRoute path="/user/:id/edit" component={UserEditScreen} />
+          <Route path="/shop" component={ShopScreen} exact />
           <Route path="/" component={HomeScreen} exact />
         </main>
         <footer className="row center">

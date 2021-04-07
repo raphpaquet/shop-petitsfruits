@@ -28,7 +28,6 @@ body {
 }
 header {
   grid-area: header;
-  /* background-color: #203040; */
   color: #fdcc9a;
   background-color: #ffffff;
   height: 10rem;
@@ -42,7 +41,6 @@ footer {
   grid-area: footer;
   display: flex;
   flex-direction: column;
-  /* background-color: #203040; */
   background-color: #f1f1f1;
   color: #969696;
 }
@@ -136,18 +134,15 @@ button.clear {
 }
 /* Header */
 header a {
-  /* color: #ffffff; */
   color: #fdcc9a;
   padding: 1rem;
   text-transform: uppercase;
 }
 a.brand {
   color: #fdcc9a;
-  /* color: #ffffff; */
   font-size: 3rem;
   text-transform: uppercase;
   text-shadow: 1px 1px orange;
-  /* font-weight: bold; */
 }
 .badge {
   color: #fcac5c;
@@ -388,6 +383,11 @@ img.large {
 .padding {
   padding-left: 2rem;
 }
+.category {
+  color: #fdcc9a;
+  text-align: center;
+  font-weight: 800;
+}
 
 /* Map */
 .full-container {
@@ -425,4 +425,24 @@ img.large {
 }
 .pagination a.active {
   font-weight: bold;
+}
+/* contact */
+.contact {
+  display: flex;
+}
+.contact h2{
+  text-shadow: 1px 1px orange;
+  font-size: 3rem;
+}
+.contact input {
+  height: 2em;
+  font-size: 0.8em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  width: 100%;
+}
+.contact textarea {
+  width: 100%;
 }
