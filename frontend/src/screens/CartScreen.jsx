@@ -33,7 +33,7 @@ export default function CartScreen(props) {
         <h1>Panier</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Le panier est vide. <em><Link to="/">Aller magasiner</Link></em>
+            Le panier est vide. <em><Link to="/shop">Aller magasiner</Link></em>
           </MessageBox>
         ) : (
           <ul>

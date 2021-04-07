@@ -23,6 +23,14 @@ const data = {
   ],
   products: [
     {
+      name: 'TEST',
+      category: 'peintures',
+      image: '/images/lamp.png',
+      price: 1,
+      description: 'tshirts',
+      countInStock: 10,
+    },
+    {
       name: 'Alien aime skate',
       category: 'peintures',
       image: '/images/alien_skate.jpg',
