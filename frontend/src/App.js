@@ -62,13 +62,13 @@ function App(props) {
               <i className="fa fa-bars"></i>
             </button>
             <Link className="brand" to="/">
-              petitsfruits boutique
+              petitsfruits
             </Link>
           </div>
           <div>
             <img
-              src="./images/logo.png"
-              alt="logo petitsfruits, grappe de raisin orange"
+              src="/images/logo.png"
+              alt="logo petitsfruits"
               className="small"
             />
           </div>
