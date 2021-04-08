@@ -3,8 +3,8 @@
 E-Commerce website for a local artist based in Montreal
 
 ## The Artist: PETITSFRUITS
-Facebook: https://www.facebook.com/petitsfruitsillustration/
-Instagram: https://www.instagram.com/petitsfruits_/
+- Facebook: https://www.facebook.com/petitsfruitsillustration/
+- Instagram: https://www.instagram.com/petitsfruits_/
 
 
 ## Preview of the website
