@@ -6,9 +6,9 @@ Instagram: https://www.instagram.com/petitsfruits_/
 
 
 ## Preview of the website
-!["Screenshot of the Shop page"](https://github.com/Matt2844/burgers-r-us/blob/master/public/docs/HomePage.png)
-!["Screenshot of Cart"](https://github.com/Matt2844/burgers-r-us/blob/master/public/docs/registerPage.png)
-!["Screenshot of Payment Screen"](https://github.com/Matt2844/burgers-r-us/blob/master/public/docs/errorPage.png)
+!["Screenshot of the Shop page"](https://github.com/raphpaquet/shop-petitsfruits/blob/main/docs/screenShotShop.png)
+!["Screenshot of Cart"](https://github.com/raphpaquet/shop-petitsfruits/commit/c0be21d34173990110560db10ffc8c2e06d2c3a4)
+!["Screenshot of Payment Screen"](https://github.com/raphpaquet/shop-petitsfruits/blob/main/docs/screenShotPay.png)
 
 ## STACK
 ReactJs, Redux, NodeJS, Express, AJAX, Mongoose/MongoDB
