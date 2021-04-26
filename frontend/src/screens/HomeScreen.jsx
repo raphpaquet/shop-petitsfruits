@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <div>
       <div>
-        <img src="./images/skate.png" alt="skateboard peint par petitsfruits" className="large" style={{maxHeight:"80rem"}}/>
+        <img src="./images/skate.png" alt="skateboard peint par petitsfruits" className="large skate" style={{maxHeight:"80rem"}}/>
       </div>
       <div>
         <Contact />

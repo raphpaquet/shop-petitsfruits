@@ -29,7 +29,6 @@ import HomeScreen from "./screens/HomeScreen";
 
 function App(props) {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-  const [logo, setLogo] = useState("logo");
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
