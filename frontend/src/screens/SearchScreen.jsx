@@ -72,8 +72,8 @@ export default function SearchScreen(props) {
           </select>
         </div> */}
       </div>
-      <div className="row top">
-        <div className="col-1">
+      <div className="search-option">
+        {/* <div className="col-0"> */}
           <div className="dropdown search-page">
             <Link to="#">
                 Categories <i className="fa fa-caret-down"></i>
@@ -123,7 +123,7 @@ export default function SearchScreen(props) {
                 </li>
               ))}
             </ul>
-          </div>
+          {/* </div> */}
 
           {/* <h3>Catégories</h3> */}
           {/* <div>
@@ -172,7 +172,8 @@ export default function SearchScreen(props) {
             </ul>
           </div> */}
         </div>
-        <div className="col-3">
+      </div>
+        <div className="col-2">
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
@@ -202,7 +203,6 @@ export default function SearchScreen(props) {
             </>
           )}
         </div>
-      </div>
     </div>
   );
 }

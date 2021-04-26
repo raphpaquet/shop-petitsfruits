@@ -23,7 +23,7 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 10rem 1fr 8rem;
+  grid-template-rows: 20rem 1fr 8rem;
   height: 100%;
 }
 header {
@@ -49,6 +49,8 @@ h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
   font-weight: lighter;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 1.6rem;
@@ -140,13 +142,14 @@ header a {
 }
 a.brand {
   color: #fdcc9a;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   text-shadow: 1px 1px orange;
 }
 .badge {
   color: #fcac5c;
   border-radius: 50%;
+  border: 1px solid #fcac5c;
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
   margin-left: 0.2rem;
@@ -165,6 +168,9 @@ a.brand {
 }
 .row.start {
   justify-content: flex-start;
+}
+.margin-side {
+  margin: 0 5rem;
 }
 .col-1 {
   flex: 1 1 15rem;
@@ -202,7 +208,8 @@ button.open-sidebar {
   margin: 0 0.5rem;
   background: none;
   color: #fdcc9a;
-  border-color: #fdcc9a;;
+  border: none;
+  /* border-color: #fdcc9a; */
   /* color: #ffffff; */
   cursor: pointer;
 }
@@ -247,6 +254,31 @@ img.medium {
 }
 img.large {
   width: 100%;
+}
+.logo {
+  max-width: 15rem;
+  width: 100%;
+  filter: drop-shadow(2px 4px 6px rgb(155, 90, 6))
+}
+.logo-bg {
+  background-position: center;
+  margin-top: 10%;
+  opacity: 0.2;
+  transform: translateY(10);
+  transition: transform 3s ease;
+  animation: myanimation 3s;
+
+}
+@keyframes myanimation {
+  0% {
+    max-width: 15rem;
+  }
+  35% {
+    max-width: 20rem;
+  }
+  100% {
+    max-width: 30rem;
+  }
 }
 
 /* Card */
@@ -332,12 +364,23 @@ img.large {
   display: block;
 }
 /* Checkout Steps */
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
 .checkout-steps > div {
   border-top: 0.3rem #c0c0c0 solid;
   color: #c0c0c0;
-  flex: 1;
   padding: 1rem;
   font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+}
+.checkout-steps > i {
+  color: rgb(220, 196, 250);
+  transform: scale(1.5);
 }
 .checkout-steps > div.active {
   border-top-color: #fdcc9a;
@@ -387,6 +430,9 @@ img.large {
   color: #fdcc9a;
   text-align: center;
   font-weight: 800;
+}
+.search-option {
+  padding-left: 2rem;
 }
 
 /* Map */

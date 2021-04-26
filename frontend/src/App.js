@@ -29,6 +29,7 @@ import HomeScreen from "./screens/HomeScreen";
 
 function App(props) {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [logo, setLogo] = useState("logo");
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
@@ -49,10 +50,27 @@ function App(props) {
     dispatch(listProductCategories());
   }, [dispatch]);
 
+
+  // Logo in background when scroll 
+  // const listenScrollEvent = (event) => {
+  //   if (window.scrollY < 50) {
+  //   return setLogo("logo")
+  //   } else if (window.scrollY > 70) {
+  //   return setLogo("logo-bg")
+  //   } 
+  // }
+  
+  // useEffect(() => {
+  //   window.addEventListener('scroll', listenScrollEvent);
+  
+  //   return () =>
+  //   window.removeEventListener('scroll', listenScrollEvent);
+  // }, []);
+
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className="row margin-side">
           <div>
             <button
               type="button"
@@ -69,7 +87,7 @@ function App(props) {
             <img
               src="/images/logo.png"
               alt="logo petitsfruits"
-              className="small"
+              className="logo"
             />
           </div>
           {/* <div>

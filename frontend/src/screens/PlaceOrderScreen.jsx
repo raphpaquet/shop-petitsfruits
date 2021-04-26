@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { createOrder } from '../actions/orderActions';
@@ -9,6 +9,7 @@ import MessageBox from '../components/MessageBox';
 
 export default function PlaceOrderScreen(props) {
   const cart = useSelector((state) => state.cart);
+  const [customShippingPrice, setCustomShippingPrice] = useState(5); 
   if (!cart.paymentMethod) {
     props.history.push('/payment');
   }
@@ -19,7 +20,7 @@ export default function PlaceOrderScreen(props) {
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(0.1);
+  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(customShippingPrice);
   // cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice;
   const dispatch = useDispatch();
@@ -103,7 +104,7 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Livraison</div>
-                  <div>{cart.shippingPrice.toFixed(2)}$</div>
+                  <div>{cart.shippingPrice === 0 ? 'gratuite' : cart.shippingPrice.toFixed(2)+'$'}</div>
                 </div>
               </li>
               {/* <li>

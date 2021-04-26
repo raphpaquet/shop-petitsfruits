@@ -30,8 +30,8 @@ export default function CartScreen(props) {
   return (
     <div className="row top">
       <div className="col-2">
-        <h1>Panier</h1>
-        <h2><Link to="/shop" >Retour à la Boutique</Link></h2>
+        <h1 className="margin-side bigger">Panier</h1>
+        <h2><Link to="/shop" className="margin-side"><i className="fa fa-chevron-left"></i> Retour à la Boutique</Link></h2>
         {cartItems.length === 0 ? (
           <MessageBox>
             Le panier est vide. <em><Link to="/shop">Aller magasiner</Link></em>
@@ -40,7 +40,7 @@ export default function CartScreen(props) {
           <ul>
             {cartItems.map((item) => (
               <li key={item.product}>
-                <div className="row">
+                <div className="row margin-side">
                   <div>
                     <img
                       src={item.image}
