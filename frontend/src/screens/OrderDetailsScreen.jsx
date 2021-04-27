@@ -86,9 +86,9 @@ export default function OrderScreen(props) {
                 <h2>Livraison</h2>
                 <p>
                   <strong>Nom:</strong> {order.shippingAddress.fullName} <br />
-                  <strong>Adresse: </strong> {order.shippingAddress.address},
+                  <strong>Adresse: </strong> {order.shippingAddress.address}, {' '}
                   {order.shippingAddress.city},{' '}
-                  {order.shippingAddress.postalCode},
+                  {order.shippingAddress.postalCode},{' '}
                   {order.shippingAddress.country}
                 </p>
                 {order.isDelivered ? (

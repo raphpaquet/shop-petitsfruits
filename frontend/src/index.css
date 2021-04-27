@@ -6,7 +6,7 @@ body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  /* font-family: Helvetica, Arial, sans-serif; */
+  color:rgb(66, 65, 65);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Karla', sans-serif;
@@ -106,7 +106,8 @@ input {
   color: #969696;
 }
 button {
-  background-color: #f8f8f8;
+  background-color: rgb(220, 196, 250);
+  /* background-color: #f8f8f8; */
   cursor: pointer;
 }
 input:hover,
@@ -134,10 +135,14 @@ button.clear {
   color: #969696;
   border: none;
 }
+.links {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid orange;
+}
 /* Header */
 header a {
-  color: #fdcc9a;
-  padding: 1rem;
+  /* color: #fdcc9a; */
+  padding: 0.8rem;
   text-transform: uppercase;
 }
 a.brand {
@@ -291,14 +296,16 @@ img.large {
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 0.5rem;
-  width: 30rem;
-  text-align: center;
 }
 .card-body {
   padding: 1rem;
 }
 .card-body > * {
   margin-bottom: 0.5rem;
+}
+.card-body.width-third {
+  width: 30rem;
+  text-align: center;
 }
 .price {
   font-size: 2rem;
@@ -361,10 +368,17 @@ img.large {
   min-width: 12rem;
   padding: 1rem;
   z-index: 1;
-  background-color: #203040;
+  background-color: #decaf7;
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
+}
+.dropdown-content > li {
+  color: rgb(66, 65, 65);
+}
+.dropdown-content > li > a:hover {
+  font-weight: 700;
+  color: rgb(125, 70, 161) !important;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -429,7 +443,7 @@ img.large {
   margin-left: 0.5rem;
 }
 .active {
-  color: #fdcc9a;
+  color: #9375c4;
   font-weight: bold;
 }
 .padding {
@@ -500,4 +514,15 @@ img.large {
 }
 .contact textarea {
   width: 100%;
+}
+
+/* Sign in  */
+.center {
+  text-align: center;
+}
+.visitor {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color:rgb(220, 196, 250) !important;
 }

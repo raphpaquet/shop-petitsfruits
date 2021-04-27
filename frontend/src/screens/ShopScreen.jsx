@@ -18,7 +18,7 @@ export default function ShopScreen() {
 
   return (
     <div>
-      <h2>Nouveautés</h2>
+      <h2>Tous les produits</h2>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (

@@ -97,7 +97,7 @@ orderRouter.put(
           {
             from: 'PetitsFruits <sarahpetitsfruits@gmail.com>',
             to: `${order.user.name} <${order.user.email}>`,
-            subject: `New order ${order._id}`,
+            subject: `Nouvelle commande ${order._id}`,
             html: payOrderEmailTemplate(order),
           },
           (error, body) => {

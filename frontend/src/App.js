@@ -50,22 +50,6 @@ function App(props) {
   }, [dispatch]);
 
 
-  // Logo in background when scroll 
-  // const listenScrollEvent = (event) => {
-  //   if (window.scrollY < 50) {
-  //   return setLogo("logo")
-  //   } else if (window.scrollY > 70) {
-  //   return setLogo("logo-bg")
-  //   } 
-  // }
-  
-  // useEffect(() => {
-  //   window.addEventListener('scroll', listenScrollEvent);
-  
-  //   return () =>
-  //   window.removeEventListener('scroll', listenScrollEvent);
-  // }, []);
-
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -89,13 +73,6 @@ function App(props) {
               className="logo"
             />
           </div>
-          {/* <div>
-            <Route
-              render={({ history }) => (
-                <SearchBox history={history}></SearchBox>
-              )}
-            ></Route>
-          </div> */}
           <div>
             <Link to="/cart">
               Panier
@@ -103,7 +80,7 @@ function App(props) {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            {userInfo ? (
+            {userInfo && !userInfo.email === 'paquetraphaelle@gmail.com' ? (
               <div className="dropdown">
                 <Link to="#">
                   {userInfo.name} <i className="fa fa-caret-down"></i>
