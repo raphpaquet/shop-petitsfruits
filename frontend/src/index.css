@@ -139,17 +139,23 @@ button.clear {
   padding-bottom: 1rem;
   border-bottom: 1px solid orange;
 }
+.highlight {
+  letter-spacing: 0.2rem;
+}
 /* Header */
 header a {
   /* color: #fdcc9a; */
   padding: 0.8rem;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
 }
 a.brand {
   color: #fdcc9a;
   font-size: 4rem;
   text-transform: uppercase;
   text-shadow: 1px 1px orange;
+  font-weight: 400;
 }
 .badge {
   color: #fcac5c;
@@ -176,6 +182,9 @@ a.brand {
 }
 .margin-side {
   margin: 0 5rem;
+}
+.margin-side-lrg {
+  margin: 0 10rem;
 }
 .col-1 {
   flex: 1 1 15rem;
@@ -264,7 +273,7 @@ img.large {
   filter: drop-shadow(2px 4px 6px rgb(155, 90, 6));
 }
 .logo {
-  max-width: 15rem;
+  max-width: 7rem;
   width: 100%;
   filter: drop-shadow(2px 4px 6px rgb(155, 90, 6))
 }
@@ -291,8 +300,8 @@ img.large {
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  /* border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8; */
   border-radius: 0.5rem;
   margin: 1rem;
   padding: 0.5rem;
@@ -341,7 +350,7 @@ img.large {
 /* Form */
 .form {
   max-width: 60rem;
-  margin: 0 auto;
+  margin: 5rem auto;
 }
 .form > div {
   display: flex;
@@ -349,8 +358,9 @@ img.large {
   margin: 1rem;
 }
 .form label {
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
+
 /* Dropdown */
 .dropdown {
   display: inline-block;
@@ -501,16 +511,17 @@ img.large {
 }
 .contact h2{
   text-shadow: 1px 1px orange;
-  font-size: 3rem;
+  font-size: 5rem;
 }
-.contact input {
+.contact input, textarea {
   height: 2em;
-  font-size: 0.8em;
+  font-size: 1.2em;
   border-top: none;
   border-right: none;
   border-left: none;
   border-radius: 0px;
   width: 100%;
+  color: #a3a2a2;
 }
 .contact textarea {
   width: 100%;

@@ -184,7 +184,7 @@ export default function SearchScreen(props) {
                 <MessageBox>No Product Found</MessageBox>
               )}
                 <h3 className="category">{category}</h3>
-              <div className="row center">
+              <div className="row center margin-side-lrg">
                 {products.map((product) => (
                   <Product key={product._id} product={product}></Product>
                 ))}

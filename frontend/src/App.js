@@ -62,9 +62,6 @@ function App(props) {
             >
               <i className="fa fa-bars"></i>
             </button>
-            <Link className="brand" to="/">
-              petitsfruits
-            </Link>
           </div>
           <div>
             <img
@@ -72,6 +69,9 @@ function App(props) {
               alt="logo petitsfruits"
               className="logo"
             />
+            <Link className="brand" to="/">
+              petitsfruits
+            </Link>
           </div>
           <div>
             <Link to="/cart">

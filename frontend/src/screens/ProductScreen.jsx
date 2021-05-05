@@ -27,10 +27,10 @@ export default function ProductScreen(props) {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div>
+        <div className="margin-side-lrg">
           <h2><Link to="/shop" >Retour à la Boutique</Link></h2>
           <div className="row top">
-            <div className="col-2">
+            <div className="col-1">
               <img
                 className="large"
                 src={product.image}
@@ -41,10 +41,9 @@ export default function ProductScreen(props) {
               <ul>
                 <li>
                   <h1>{product.name}</h1>
-                </li>
-                <li>Price : ${product.price}</li>
+                  </li>
                 <li>
-                  Description:
+                  <p>{product.category}</p>
                   <p>{product.description}</p>
                 </li>
               </ul>
@@ -54,8 +53,8 @@ export default function ProductScreen(props) {
                 <ul>
                   <li>
                     <div className="row">
-                      <div>Price</div>
-                      <div className="price">${product.price}</div>
+                      <div>Prix</div>
+                      <div className="price">{(product.price).toFixed(2)}$</div>
                     </div>
                   </li>
                   <li>
@@ -63,9 +62,9 @@ export default function ProductScreen(props) {
                       <div>Status</div>
                       <div>
                         {product.countInStock > 0 ? (
-                          <span className="success">In Stock</span>
+                          <span className="success">Disponible</span>
                         ) : (
-                          <span className="danger">Unavailable</span>
+                          <span className="danger">Épuisé</span>
                         )}
                       </div>
                     </div>

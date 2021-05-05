@@ -16,7 +16,7 @@ export default function Product(props) {
         <Link to={`/product/${product._id}`}>
           <h2 className="orange">{product.name}</h2>
         </Link>
-        <div className="price">${product.price}</div>
+        <div className="price">{(product.price).toFixed(2)}$</div>
       </div>
     </div>
   );
