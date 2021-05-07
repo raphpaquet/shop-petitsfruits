@@ -80,7 +80,8 @@ function App(props) {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            {userInfo && !userInfo.email === 'paquetraphaelle@gmail.com' ? (
+            {/* {userInfo && !userInfo.email === 'paquetraphaelle@gmail.com' ? ( */}
+            { userInfo ? ( 
               <div className="dropdown">
                 <Link to="#">
                   {userInfo.name} <i className="fa fa-caret-down"></i>
@@ -99,9 +100,9 @@ function App(props) {
                   </li>
                 </ul>
               </div>
-            ) : (
+            ) : ( 
               <Link to="/signin">Connexion</Link>
-            )}
+             )} 
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">

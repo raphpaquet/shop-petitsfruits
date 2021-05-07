@@ -112,12 +112,13 @@ button {
 }
 input:hover,
 select:hover,
-textarea:hover,
-button:hover {
+textarea:hover {
   border: 0.1rem #c4c3c3 solid;
 }
 button:hover {
   font-style: italic;
+  color: #9375c4;
+  font-weight: bold;
 }
 button.primary {
   background-color: #fdcc9a;

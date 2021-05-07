@@ -79,7 +79,7 @@ export default function PlaceOrderScreen(props) {
                         </div>
 
                         <div>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x {(item.price).toFixed(2)} = {(item.qty * item.price).toFixed(2)}$
                         </div>
                       </div>
                     </li>
@@ -98,7 +98,7 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Items</div>
-                  <div>${cart.itemsPrice.toFixed(2)}</div>
+                  <div>{cart.itemsPrice.toFixed(2)}$</div>
                 </div>
               </li>
               <li>

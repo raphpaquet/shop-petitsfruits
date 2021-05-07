@@ -6,8 +6,10 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 
 export default function SigninScreen(props) {
-  const [email, setEmail] = useState('paquetraphaelle@gmail.com');
-  const [password, setPassword] = useState("visitorpassword");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('paquetraphaelle@gmail.com');
+  // const [password, setPassword] = useState("visitorpassword");
 
   const redirect = props.location.search
     ? props.location.search.split("=")[1]
@@ -39,7 +41,7 @@ export default function SigninScreen(props) {
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
           <label htmlFor="email"></label>
-          {!email === 'paquetraphaelle@gmail.com' && !password === 'visitorpassword' ?  
+          {/* {!email === 'paquetraphaelle@gmail.com' && !password === 'visitorpassword' ?  
           <input
           type="email"
           id="email"
@@ -47,17 +49,18 @@ export default function SigninScreen(props) {
           required
           onChange={(e) => setEmail(e.target.value)}
           ></input>
-          : 
+          :  */}
           <input
           type="email"
           id="email"
           placeholder="Adresse Courriel"
           onChange={(e) => setEmail(e.target.value)}
-          ></input> }
+          ></input> 
+          {/* } */}
         </div>
         <div>
           <label htmlFor="password"></label>
-          {!email === 'paquetraphaelle@gmail.com' && !password === 'visitorpassword' ?  
+          {/* {!email === 'paquetraphaelle@gmail.com' && !password === 'visitorpassword' ?  
             <input
               type="password"
               id="password"
@@ -65,13 +68,14 @@ export default function SigninScreen(props) {
               required
               onChange={(e) => setPassword(e.target.value)}
               ></input>
-              :
+              : */}
               <input
                 type="password"
                 id="password"
                 placeholder="Mot De Passe"
                 onChange={(e) => setPassword(e.target.value)}
-                ></input> }
+                ></input> 
+                {/* } */}
         </div>
         <div>
           <label />
@@ -90,9 +94,9 @@ export default function SigninScreen(props) {
         </div>
       </form>
       </div>
-      <div className="col-1 visitor">
+      {/* <div className="col-1 visitor">
         <button type="submit" onClick={submitHandler}>Continuer en tant que visiteur</button>
-      </div>
+      </div> */}
     </div>
   );
 }

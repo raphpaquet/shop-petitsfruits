@@ -67,7 +67,7 @@ export default function CartScreen(props) {
                       ))}
                     </select>
                   </div>
-                  <div>{item.price}$</div>
+                  <div>{(item.price).toFixed(2)}$</div>
                   <div>
                     <button
                       className="button clear"
@@ -88,7 +88,7 @@ export default function CartScreen(props) {
             <li>
               <h2>
                 Sous-total({cartItems.reduce((a, c) => a + c.qty, 0)} {cartItems.length > 1 ? 'items' : 'item'}) :{" "}
-                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}$
+                {(cartItems.reduce((a, c) => a + c.price * c.qty, 0)).toFixed(2)}$
               </h2>
             </li>
             <li>

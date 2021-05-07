@@ -191,13 +191,15 @@ export default function SearchScreen(props) {
               </div>
               <div className="row center pagination">
                 {[...Array(pages).keys()].map((x) => (
+                  pages.length > 1 ? 
                   <Link
                     className={x + 1 === page ? "active" : ""}
                     key={x + 1}
                     to={getFilterUrl({ page: x + 1 })}
                   >
                     {x + 1}
-                  </Link>
+                  </Link> :
+                  ''
                 ))}
               </div>
             </>

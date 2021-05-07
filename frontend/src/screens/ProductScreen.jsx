@@ -93,7 +93,7 @@ export default function ProductScreen(props) {
                           onClick={addToCartHandler}
                           className="primary block"
                         >
-                          Add to Cart
+                          Ajouter au panier
                         </button>
                       </li>
                     </>
