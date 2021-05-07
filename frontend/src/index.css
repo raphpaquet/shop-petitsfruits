@@ -143,12 +143,16 @@ button.clear {
 .highlight {
   letter-spacing: 0.2rem;
 }
+.button {
+  color: #9375c4;
+  text-decoration: underline;
+}
 /* Header */
 header a {
   /* color: #fdcc9a; */
   padding: 0.8rem;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 a.brand {

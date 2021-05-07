@@ -123,7 +123,7 @@ export default function ShippingAddressScreen(props) {
               <option>NB</option>
               <option>NS</option>
               <option>ON</option>
-              <option>QC</option>
+              <option selected="selected">QC</option>
               <option>SK</option>
               <option>NL</option>
               <option>YT</option>
@@ -137,7 +137,7 @@ export default function ShippingAddressScreen(props) {
             required
             onChange={(e) => setCountry(e.target.value)}>
               <option value="" disabled selected >Pays</option>
-              <option>Canada</option>
+              <option selected="selected">Canada</option>
           </select>
         </div>
         <div>

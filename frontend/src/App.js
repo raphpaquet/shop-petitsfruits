@@ -110,9 +110,6 @@ function App(props) {
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
-                  </li>
-                  <li>
                     <Link to="/productlist">Produits</Link>
                   </li>
                   <li>

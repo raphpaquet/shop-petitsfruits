@@ -43,7 +43,7 @@ export default function ProductScreen(props) {
                   <h1>{product.name}</h1>
                   </li>
                 <li>
-                  <p>{product.category}</p>
+                  <Link to={`/search/category/${product.category}`} className="button">catégorie: {product.category}</Link>
                   <p>{product.description}</p>
                 </li>
               </ul>
